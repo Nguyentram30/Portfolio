@@ -12,11 +12,10 @@ export const heroData = {
 export const educationData = [
   {
     id: 1,
-    school: "Trường Đại học Thủ Dầu Một",
-    major: "Công nghệ Thông tin",
-    period: "2023 - nay",
-    description: "Định hướng theo Cloud Computing & DevOps."
-  }
+    school: "Thu Dau Mot University",
+    major: "Information Technology",
+    period: "2023 - present",
+    }
 ];
 
 // ====== SKILLS DATA ======
@@ -35,7 +34,7 @@ export const skillsData = {
     {
       id: 3,
       category: "Hệ điều hành",
-      items: ["Linux cơ bản (quản lý file, phân quyền, service, package, thao tác terminal)"]
+      items: ["Basic Linux (file management, permissions, services, package management, terminal)"]
     },
     {
       id: 4,
@@ -46,13 +45,13 @@ export const skillsData = {
   soft: [
     {
       id: 1,
-      category: "Thiết kế",
+      category: "Design tools",
       items: ["Canva", "Adobe Photoshop", "Adobe Illustrator", "After Effects"]
     },
     {
       id: 2,
-      category: "Khác",
-      items: ["Giao tiếp và làm việc nhóm tốt", "Chủ động, có trách nhiệm trong công việc"]
+      category: "Soft Skills",
+      items: ["Good communication and teamwork skills", "Proactive and responsible at work"]
     }
   ]
 };
@@ -61,15 +60,15 @@ export const skillsData = {
 export const projectsData = [
   {
     id: 1,
-    title: "Nghiên cứu và Xây dựng hệ thống giám sát hiệu năng ứng dụng web thời gian thực sử dụng Prometheus và Grafana",
-    description: "Phát triển hệ thống monitoring real-time cho web app bằng Prometheus và Grafana, hỗ trợ phân tích hiệu năng, cảnh báo sự cố và cải thiện tính ổn định hệ thống.",
-    link: "#"
+    title: "Real-Time Web Application Monitoring System | Dec 2025 – Present",
+    description: "Researched and developed a real-time monitoring system for web applications using Prometheus and Grafana. The system supports performance analysis, incident alerting, and improves overall system reliability and stability.",
+    link: "https://github.com/Nguyentram30/Real-Time-Web-Application-Monitoring-System.git"
   },
   {
     id: 2,
-    title: "Dự án triển khai hệ thống Pipeline CI/CD thời gian thực",
-    description: "Thiết kế và triển khai hệ thống CI/CD tự động cho ứng dụng web, hỗ trợ build, test và deploy theo thời gian thực. Tích hợp Docker để container hóa ứng dụng và Jenkins để tự động hóa quy trình, giúp rút ngắn thời gian phát hành và tăng độ ổn định hệ thống.",
-    link: "#"
+    title: "Real-Time CI/CD Pipeline Deployment | Jan 2026",
+    description: "Designed and implemented an automated CI/CD pipeline for a web application to support real-time build, test, and deployment processes. Integrated Docker for containerization and Jenkins for workflow automation, reducing release time and improving system stability.",
+    link: "https://github.com/Nguyentram30/Real-Time-CI-CD-Pipeline-Deployment.git"
   }
 ];
 
@@ -77,18 +76,31 @@ export const projectsData = [
 export const additionalInfoData = [
   {
     id: 1,
-    title: "Giải thưởng hoạt động",
-    content: "Giải Ý tưởng xuất sắc trong chương trình giao lưu giữa Đại học Thủ Dầu Một và Đại học Hanam 2025"
+    title: "Awards:",
+    content: "Outstanding Idea Award – Exchange Program between Thu Dau Mot University and Hanam University (2025)"
   },
   {
     id: 2,
-    title: "Hoạt động Đoàn Thanh niên / Hội sinh viên",
-    content: "Hiện tại đang giữ chức vụ: Ủy viên BCH Đoàn Viện Công nghệ số, Liên chi Hội Phó LCH Viện Công nghệ Số"
+    title: "Extracurricular Activities:",
+    content: [
+    "Executive Committee Member – Youth Union of Digital Technology Institute",
+    " Vice President – Student Association of Digital Technology Institute",
+  ]
+    
   }
 ];
 
 // ====== FOOTER DATA ======
 export const footerData = {
-  email: "email@example.com",
+  email: "nngtram3011@gmail.com",
   copyYear: new Date().getFullYear()
+};
+
+// ====== ABOUT DATA ======
+export const aboutData = {
+  id: 'about',
+  title: 'About',
+  paragraphs: [
+    "I am a third-year Information Technology student with a strong interest in Cloud Computing and DevOps. I have hands-on experience with Docker, Jenkins, and writing basic automation scripts through academic and personal projects. I am seeking an internship opportunity in a professional environment to gain practical experience in system operations, application deployment support, and improving software development processes. I am proactive, eager to learn, and ready to adapt to new technologies.",
+  ]
 };

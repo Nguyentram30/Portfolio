@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #071025;
+    --panel: #0d1624;
+  }
+  html, body, #root { height: 100%; }
+  body { @apply bg-gradient-to-b from-[#071025] to-[#041021] text-slate-100 font-sans; }
+}
+
+/* small helpers */
+.section { @apply py-20; }
+.card { @apply bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.04)] rounded-lg p-6 shadow-[0_6px_20px_rgba(2,6,23,0.6)]; }
+
+/* reveal animation utility */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity:0; transform: translateY(16px); }
+.reveal.visible { animation: fadeInUp 520ms cubic-bezier(.2,.9,.3,1) forwards; }

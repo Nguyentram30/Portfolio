@@ -1,27 +1,33 @@
 import React from 'react'
 import { projectsData } from '../data'
-import { useIntersection } from '../hooks/useIntersection'
+import { motion } from 'framer-motion'
 
 export default function Projects(){
-  const [ref, isVisible] = useIntersection();
-
   return (
-    <section id="projects" ref={ref} className={`container ${isVisible ? 'visible' : ''}`} style={{ paddingTop: '40px', paddingBottom: '40px' }}>
-      <h3 style={{marginTop:24}}> DỰ ÁN CÁ NHÂN </h3>
-      <div className="projects-grid" style={{marginTop:12}}>
-        {projectsData.map((project, index) => (
-          <article 
-            key={project.id} 
-            className={`card ${isVisible ? 'visible' : ''}`}
-            style={{
-              animationDelay: `${index * 0.1}s`
-            }}
-          >
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} style ={{marginTop: 'auto', textDecoration: 'none', color: '#0cdef5'}}>Xem chi tiết →</a>
-          </article>
-        ))}
+    <section id="projects" className="section">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wide mb-4">PROJECT</h2>
+        <p className="text-slate-300 mb-6">Academic projects developed during my studies, focusing on practical applications and hands-on experience.</p>
+
+        <div className="projects-grid">
+          {projectsData.map((project, idx) => (
+            <motion.article
+              key={project.id}
+              initial={{ opacity:0, y:10 }}
+              whileInView={{ opacity:1, y:0 }}
+              viewport={{ once:true }}
+              transition={{ delay: idx * 0.08 }}
+              className="card rounded-2xl"
+            >
+              {/* <div className="h-40 bg-[rgba(255,255,255,0.02)] rounded-lg mb-4 flex items-center justify-center text-slate-400">Image</div> */}
+              <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+              <p className="text-sm text-slate-300 mb-4">{project.description}</p>
+              <div className="flex items-center gap-3 mt-auto">
+                <a href={project.link} className="text-sm font-medium text-accent hover:underline">View Details →</a>
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
     </section>
   )
